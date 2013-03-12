@@ -12,3 +12,11 @@ describe "Spacey", ->
         c = new Spacey.Card
         expect(c.toBeDefined)
 
+    it 'can add a card to the deck', ->
+        s = new Spacey.Spacey
+        c = new Spacey.Card
+        expect(s.deck.length).toEqual 0
+        s.add("hello")
+        expect(s.deck.length).toEqual 1
+
+
