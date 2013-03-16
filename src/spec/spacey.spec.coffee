@@ -19,4 +19,15 @@ describe "Spacey", ->
         s.add(f)
         expect(s.facts.length).toEqual 1
 
+describe "Fact", ->
+    
+    it 'has facets', ->
+        f = new Spacey.Fact
+        expect(f.facets.length).toEqual 0
+
+    it 'can add facets', ->
+        f = new Spacey.Fact
+        expect(f.facets.length).toEqual 0
+        f.add("Hello")
+        expect(f.facets.length).toEqual 1
 
