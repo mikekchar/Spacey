@@ -2,21 +2,21 @@ Spacey = require '../coffee/spacey.coffee'
 
 describe "Spacey", ->
 
-    it 'has a deck', ->
+    it 'has facts', ->
         s = new Spacey.Spacey
         expect(s).toBeDefined
-        expect(s.deck).toBeDefined
-        expect(s.deck.length).toEqual 0
+        expect(s.facts).toBeDefined
+        expect(s.facts.length).toEqual 0
 
-    it 'can create a card', ->
-        c = new Spacey.Card
-        expect(c.toBeDefined)
+    it 'can create a fact', ->
+        f = new Spacey.Fact
+        expect(f.toBeDefined)
 
-    it 'can add a card to the deck', ->
+    it 'can add a fact to the facts', ->
         s = new Spacey.Spacey
-        c = new Spacey.Card
-        expect(s.deck.length).toEqual 0
-        s.add("hello")
-        expect(s.deck.length).toEqual 1
+        f = new Spacey.Fact
+        expect(s.facts.length).toEqual 0
+        s.add(f)
+        expect(s.facts.length).toEqual 1
 
 

@@ -1,14 +1,14 @@
 exports.Spacey =
 class Spacey
     constructor: ->
-        @deck = []
+        @facts = []
     
     deck: ->
-        @deck
+        @facts
 
-    add: (card) ->
-        @deck += card
+    add: (fact) ->
+        @facts.push fact
 
-exports.Card =
-class Card
+exports.Fact =
+class Fact
 
