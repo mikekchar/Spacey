@@ -13,15 +13,15 @@ What is Spacey not?
 In some ways it is easier to describe Spacey by contrasting it to
 what it is not.
 
-    - Spacey is not flash card system.  It can be used to build
-      a flash card system, but it can also be used to in other
-      areas where review is necessary.  See the Future Steps
-      section for an example of what I want to use Spacey for.
+- Spacey is not flash card system.  It can be used to build
+  a flash card system, but it can also be used to in other
+  areas where review is necessary.  See the Future Steps
+  section for an example of what I want to use Spacey for.
 
-    - Spacey is not a Spaced Repetition System (SRS).  Spacey will
-      include an SRS system, but it will be used in conjunction
-      with other techniques such as spacing (different than spaced
-      repetition) and interleaving.
+- Spacey is not a Spaced Repetition System (SRS).  Spacey will
+  include an SRS system, but it will be used in conjunction
+  with other techniques such as spacing (different than spaced
+  repetition) and interleaving.
 
 Frequently Unanswered Questions
 -------------------------------
@@ -32,54 +32,54 @@ and I don't have to answer again.
 
 ### Why Coffeescript?
 
-    1. Why is this in Coffeescript????  Because I wanted to play
-       with Coffeescript.
-    2. No, I mean, why do this with a Javascript derivative???  Short
-       answer: Because I wanted to.  Long answer:  I have an idea
-       that it might be useful for me in the future, but in the meantime,
-       I just wanted to play with Coffeescript.
-    3. No, I mean, I can't do anything with this except write
-       browser plugins or websites.  Isn't that completely useless?
-       No, I don't think so.
-    4. OK, how about implementing this in a useful language?
-       Maybe, if I feel like it.  However, Spacey should not be
-       complicated.  Feel free to look at the implementation and
-       reimplement in your definition of a useful language.  I
-       will probably even help you if you do the lion's share of
-       the work.
+1. Why is this in Coffeescript????  Because I wanted to play
+   with Coffeescript.
+2. No, I mean, why do this with a Javascript derivative???  Short
+   answer: Because I wanted to.  Long answer:  I have an idea
+   that it might be useful for me in the future, but in the meantime,
+   I just wanted to play with Coffeescript.
+3. No, I mean, I can't do anything with this except write
+   browser plugins or websites.  Isn't that completely useless?
+   No, I don't think so.
+4. OK, how about implementing this in a useful language?
+   Maybe, if I feel like it.  However, Spacey should not be
+   complicated.  Feel free to look at the implementation and
+   reimplement in your definition of a useful language.  I
+   will probably even help you if you do the lion's share of
+   the work.
 
 #### Unique SRS algorithm
 
-    1. Why did you reinvent the wheel with your SRS algorithm?  Because
-       it was fun.
-    2. No, I mean, why not use something proven like Supermemo's?  It
-       is true that Supermemo's algorithm is used ubiquitously.  That is
-       in fact part of the reason I chose not to use it.  Everybody using
-       the same technique means that we will never improve the state of
-       the art.
-    3. No, I mean, Supermemo dude got a PhD for his work on that algorithm.
-       What makes you think you can do something better?  I don't know
-       if mine is better or not.  However, if you look at the Supermemo
-       algorithms, you will see many decisions being made with no
-       reference to data backing it up.  For example, the backoff timing
-       appears to be completely arbitrary based on his gut feeling
-       of how it should work.  He claims that he has data to back up his
-       decisions, but doesn't document those claims.
-    4. But with the Supermemo algorithms, the user chooses how well they
-       know the item, while with Spacey's algorithm, you only specify
-       if they remembered or not.  Isn't Supermemo's algorithm better?
-       There is no evidence to support that a person's impression of
-       how well they know something is correlated to how well they
-       actually know something.  In fact, there is considerable evidence
-       to support the opposite hypothesis.  See: Dunning-Kruger effect.
-    5. But with Supermemo, the algorithm knows when I need to review
-       something.  Spacey's algorithm doesn't calculate that.  Isn't
-       that worse?  See: What Spacey is not.  Spacey is not a Spaced
-       Repetition System.  It merely prioritises reviews.  It tells you
-       which item is the most important to review now.  You choose
-       when to review.  I feel this is a feature, not a bug since I
-       don't want a computer program telling me that it's time to study.
-       YMMV.
+1. Why did you reinvent the wheel with your SRS algorithm?  Because
+   it was fun.
+2. No, I mean, why not use something proven like Supermemo's?  It
+   is true that Supermemo's algorithm is used ubiquitously.  That is
+   in fact part of the reason I chose not to use it.  Everybody using
+   the same technique means that we will never improve the state of
+   the art.
+3. No, I mean, Supermemo dude got a PhD for his work on that algorithm.
+   What makes you think you can do something better?  I don't know
+   if mine is better or not.  However, if you look at the Supermemo
+   algorithms, you will see many decisions being made with no
+   reference to data backing it up.  For example, the backoff timing
+   appears to be completely arbitrary based on his gut feeling
+   of how it should work.  He claims that he has data to back up his
+   decisions, but doesn't document those claims.
+4. But with the Supermemo algorithms, the user chooses how well they
+   know the item, while with Spacey's algorithm, you only specify
+   if they remembered or not.  Isn't Supermemo's algorithm better?
+   There is no evidence to support that a person's impression of
+   how well they know something is correlated to how well they
+   actually know something.  In fact, there is considerable evidence
+   to support the opposite hypothesis.  See: Dunning-Kruger effect.
+5. But with Supermemo, the algorithm knows when I need to review
+   something.  Spacey's algorithm doesn't calculate that.  Isn't
+   that worse?  See: What Spacey is not.  Spacey is not a Spaced
+   Repetition System.  It merely prioritises reviews.  It tells you
+   which item is the most important to review now.  You choose
+   when to review.  I feel this is a feature, not a bug since I
+   don't want a computer program telling me that it's time to study.
+   YMMV.
 
 ### What are the differences between Spaced Repetition, Spacing and Interleaving
 
