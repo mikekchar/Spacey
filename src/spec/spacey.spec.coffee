@@ -21,13 +21,13 @@ describe "Spacey", ->
 
 describe "Fact", ->
     
-    it 'has facets', ->
+    it 'has trials', ->
         f = new Spacey.Fact
-        expect(f.facets.length).toEqual 0
+        expect(f.trials.length).toEqual 0
 
-    it 'can add facets', ->
+    it 'can add trials', ->
         f = new Spacey.Fact
-        expect(f.facets.length).toEqual 0
+        expect(f.trials.length).toEqual 0
         f.add("Hello")
-        expect(f.facets.length).toEqual 1
+        expect(f.trials.length).toEqual 1
 

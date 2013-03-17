@@ -7,10 +7,10 @@ class Spacey
 
 class Fact
     constructor: ->
-        @facets = []
+        @trials = []
 
-    add: (facet) ->
-        @facets.push facet
+    add: (trial) ->
+        @trials.push trial
 
 exports.Spacey = Spacey
 exports.Fact = Fact
