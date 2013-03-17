@@ -23,6 +23,29 @@ what it is not.
   with other techniques such as spacing (different than spaced
   repetition) and interleaving.
 
+Using Spacey
+------------
+Spacey is currently in development and doesn't do anything yet.
+Note that Spacey is a development library.  It is only useful for
+developers writing applications.
+
+Helping with Development
+------------------------
+If you wish help with development, you will need the following:
+
+- node.js: latest version (0.10.0) as of this this writing
+- coffee-script: Install using `npm coffee-script`
+- jasmine-node: Install using `npm jasmine-node`
+
+Warning: The version of node.js on Ubuntu (and presumably other
+Debian based systems) is not supported by the version of coffee-script
+in npm.  Thus you must compile node.js yourself.  You can get it
+[here](http://nodejs.org/).
+
+To run the tests type: `jasmine-node --autotest --coffee src` from the 
+main directory.  This will run the tests and watch for changes on the
+source code in order to rerun appropriate tests.
+
 Frequently Unanswered Questions
 -------------------------------
 Don't ask me to make an acronym for the above heading... These
@@ -146,4 +169,62 @@ a benefit it is for learning something.  It has been said that spacing
 and interleaving eclipse spaced repetition in effectiveness by at least
 a binary order of magnitude.  That is why I really want to try to find
 some ways of implementing it in Spacey.
+
+Future Steps
+------------
+While I have avoided talking about why I am writing Spacey, there are
+actually a few things that I have in mind.
+
+First, when I originally wrote JLDrill, I chose Ruby and GTK+ because
+I was interested in learning Ruby and I was only concerned with deploying
+on Linux based systems. As development continued, I became increasingly
+frustrated at the difficulty in deploying GTK+ Ruby applications on
+Windows and Mac.  While not impossible, it is quite difficult and it
+cut down on potential contributors.  The set of people learning Japanese
+while using Linux based systems and secure enough with Ruby to install
+the app through a Gem is quite small.
+
+Quite some time ago, someone suggested that I switch to making a web
+application.  I initially threw out the idea as I did not want to
+maintain a website for others to use.  However, the idea lodged itself in
+my brain and because deployment of JLDrill is so difficult, I may yet
+do it. 
+
+The choice of Javascript/Coffeescript as a development language is strange.
+On the one side, after learning Javascript I became enamoured with its
+minimilistic approach.  Looking at Coffeescript, it looked even more
+entertaining and I knew that I wanted an excuse to use it.  Spacey is
+that excuse.
+
+Some ideas I have for Spacey are more practical, though.  First, I can
+see potential in utilising it together with browser plugins like
+Rikaichan.  In fact, if Rikaichan had had a spaced repetition system
+built into it, I would never have written JLDrill.  The whole idea of
+being able to browse the web searching for unknown words/sentences
+and then easily sticking them into a review system appeals to me
+greatly.  I think writing Spacey is a much better idea that extending
+JLDrill so that it can browse the web.
+
+Still with plugins I can see potential for other useful things.  Human
+languages are not the only thing that can benefit from review systems.
+It occurs to me that we have a learning problem amongst programmers.
+We don't identify and study good code.  A plugin that allowed one to
+browse something like Github and help the user review code that was
+good, so that it becomes second nature to them might be useful.
+
+Even more ambitiously, I have an idea that such a learning system could
+be useful for training new users on a website.  I once jokingly
+suggested that we use electric shocks in our application to ward users
+away from features that were buggy.  The idea is to train them to use
+it "properly" (where "properly" means the way we tested it).
+
+In seriousness, trying to build a system that helpfully reminds people
+how to do things at regular intervals might be beneficial.  Making
+a system that determines what thing is more important to be reviewed
+at any given time could be useful.  Although, I am aware of the risk
+of developing the next MS Bob.
+
+In any case, at the moment, this is mostly a programming exercise for me,
+but in the long term I think there are some opportunities for Spacey.
+Only time will tell.
 
