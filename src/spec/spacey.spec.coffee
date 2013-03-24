@@ -1,4 +1,5 @@
 Spacey = require '../coffee/spacey.coffee'
+Fakes = require '../coffee/fakes.coffee'
 
 describe "Spacey", ->
 
@@ -13,7 +14,8 @@ describe "Fact", ->
     
     it 'can add trials', ->
         f = new Spacey.Fact
+        t = new Fakes.Trial
         expect(f.trials.length).toEqual 0
-        f.add("Hello")
+        f.add(t)
         expect(f.trials.length).toEqual 1
 

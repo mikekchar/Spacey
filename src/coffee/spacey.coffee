@@ -1,16 +1,14 @@
-class Spacey
+exports.Spacey = class Spacey
     constructor: ->
         @facts = []
     
     add: (fact) ->
         @facts.push fact
 
-class Fact
+exports.Fact = class Fact
     constructor: ->
         @trials = []
 
     add: (trial) ->
         @trials.push trial
 
-exports.Spacey = Spacey
-exports.Fact = Fact
