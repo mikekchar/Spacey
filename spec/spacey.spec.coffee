@@ -1,10 +1,10 @@
-Spacey = require '../coffee/spacey.coffee'
-Fakes = require '../coffee/fakes.coffee'
+Spacey = require '../src/spacey.coffee'
+Fakes = require '../spec_helper/fakes.coffee'
 
-describe "Spacey", ->
+describe "Facts", ->
 
     it 'can add a fact to the facts', ->
-        s = new Spacey.Spacey
+        s = new Spacey.Facts
         f = new Spacey.Fact
         expect(s.facts.length).toEqual 0
         s.add(f)

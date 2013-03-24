@@ -1,4 +1,4 @@
-exports.Spacey = class Spacey
+exports.Facts = class Facts
     constructor: ->
         @facts = []
     
