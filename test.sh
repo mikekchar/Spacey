@@ -1,4 +1,4 @@
 #! /bin/sh
 
-jasmine-node --color --coffee --autotest spec
+jasmine-node --color --coffee --autotest .
 
