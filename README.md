@@ -46,6 +46,10 @@ To run the tests type: `jasmine-node --autotest --coffee src` from the
 main directory.  This will run the tests and watch for changes on the
 source code in order to rerun appropriate tests.
 
+Note: the script test.sh will set up the path and run the
+tests assuming that you put the node modules directory in
+the current directory.
+
 Frequently Unanswered Questions
 -------------------------------
 Don't ask me to make an acronym for the above heading... These
