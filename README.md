@@ -33,9 +33,9 @@ Helping with Development
 ------------------------
 If you wish help with development, you will need the following:
 
-- node.js: latest version (0.10.0) as of this this writing
-- coffee-script: Install using `npm coffee-script`
-- jasmine-node: Install using `npm jasmine-node`
+- node.js: latest version (0.10.3) as of this this writing
+- coffee-script: Install using `npm install coffee-script`
+- jasmine-node: Install using `npm install jasmine-node`
 
 Warning: The version of node.js on Ubuntu (and presumably other
 Debian based systems) is not supported by the version of coffee-script
