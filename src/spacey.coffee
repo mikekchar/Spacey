@@ -1,4 +1,7 @@
-exports.Quiz = class Quiz
+# If exports exist (i.e. nodeJS) use it, otherwise window (browser)
+root = exports ? this
+
+class root.Quiz
     constructor: ->
         @new_bin = []
         @working_bin = []
@@ -10,7 +13,7 @@ exports.Quiz = class Quiz
         a = @new_bin.pop()
         @working_bin.push(a)
 
-exports.Bin = class Bin
+class root.Bin
     constructor: ->
         @facts = []
     
@@ -21,7 +24,7 @@ exports.Bin = class Bin
         @facts.length
 
 
-exports.Fact = class Fact
+class root.Fact
     constructor: ->
         @trials = []
 
