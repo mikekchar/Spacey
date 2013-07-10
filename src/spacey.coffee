@@ -1,33 +1,38 @@
 # If exports exist (i.e. nodeJS) use it, otherwise window (browser)
 root = exports ? this
 
-class root.Quiz
+class root.Fact
     constructor: ->
-        @new_bin = []
-        @working_bin = []
+        @trials = []
 
-    add: (fact) ->
-        @new_bin.push fact
-
-    next: ->
-        a = @new_bin.pop()
-        @working_bin.push(a)
+    push: (trial) ->
+        @trials.push trial
 
 class root.Bin
     constructor: ->
         @facts = []
     
-    add: (fact) ->
-        @facts.push fact
+    push: (fact) ->
+        @facts.push(fact)
+
+    pop: ->
+        @facts.pop()
+
+    index: (i) ->
+        @facts[i]
 
     length: ->
         @facts.length
 
-
-class root.Fact
+class root.Quiz
     constructor: ->
-        @trials = []
+        @new_bin = new root.Bin
+        @working_bin = new root.Bin
 
-    add: (trial) ->
-        @trials.push trial
+    push: (fact) ->
+        @new_bin.push(fact)
+
+    next: ->
+        a = @new_bin.pop()
+        @working_bin.push(a)
 

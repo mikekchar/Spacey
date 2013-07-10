@@ -5,21 +5,21 @@ describe "Quiz", ->
 
     it 'adds new items to the new bin', ->
         q = new Quiz
-        expect(q.new_bin.length).toEqual 0
+        expect(q.new_bin.length()).toEqual 0
         f = new Fact
-        q.add(f)
-        expect(q.new_bin.length).toEqual 1
+        q.push(f)
+        expect(q.new_bin.length()).toEqual 1
 
     it 'moves items to the working bin', ->
         q = new Quiz
         f = new Fact
-        q.add(f)
-        expect(q.new_bin.length).toEqual 1
-        expect(q.working_bin.length).toEqual 0
+        q.push(f)
+        expect(q.new_bin.length()).toEqual 1
+        expect(q.working_bin.length()).toEqual 0
         q.next()
-        expect(q.new_bin.length).toEqual 0
-        expect(q.working_bin.length).toEqual 1
-        expect(q.working_bin[0]).toBe f
+        expect(q.new_bin.length()).toEqual 0
+        expect(q.working_bin.length()).toEqual 1
+        expect(q.working_bin.index(0)).toBe f
 
 describe "Bin", ->
 
@@ -27,7 +27,7 @@ describe "Bin", ->
         b = new Bin
         f = new Fact
         expect(b.facts.length).toEqual 0
-        b.add(f)
+        b.push(f)
         expect(b.facts.length).toEqual 1
 
 describe "Fact", ->
@@ -36,6 +36,6 @@ describe "Fact", ->
         f = new Fact
         t = new Fake.Trial
         expect(f.trials.length).toEqual 0
-        f.add(t)
+        f.push(t)
         expect(f.trials.length).toEqual 1
 
