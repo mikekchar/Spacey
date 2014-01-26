@@ -34,15 +34,15 @@ Helping with Development
 If you wish help with development, you will need the following:
 
 - node.js: latest version (0.10.3) as of this this writing
-- coffee-script: Install using `npm install coffee-script`
-- jasmine-node: Install using `npm install jasmine-node`
+- coffee-script: Install using `npm install -g coffee-script`
+- jasmine-node: Install using `npm install -g jasmine-node`
 
 Warning: The version of node.js on Ubuntu (and presumably other
 Debian based systems) is not supported by the version of coffee-script
 in npm.  Thus you must compile node.js yourself.  You can get it
 [here](http://nodejs.org/).
 
-To run the tests type: `jasmine-node --autotest --coffee src` from the 
+To run the tests type: `jasmine-node --autotest --coffee spec` from the 
 main directory.  This will run the tests and watch for changes on the
 source code in order to rerun appropriate tests.
 
