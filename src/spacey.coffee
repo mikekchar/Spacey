@@ -24,15 +24,3 @@ class root.Bin
     length: ->
         @facts.length
 
-class root.Quiz
-    constructor: ->
-        @new_bin = new root.Bin
-        @working_bin = new root.Bin
-
-    push: (fact) ->
-        @new_bin.push(fact)
-
-    next: ->
-        a = @new_bin.pop()
-        @working_bin.push(a)
-
