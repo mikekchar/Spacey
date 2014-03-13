@@ -1,4 +1,5 @@
-{Bin, Fact} = require '../src/spacey.coffee'
+{Bin} = require '../src/bin.coffee'
+{Fact} = require '../src/spacey.coffee'
 Fake = require '../spec_helper/fakes.coffee'
 
 describe "Bin", ->

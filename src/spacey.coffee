@@ -8,19 +8,3 @@ class root.Fact
     push: (trial) ->
         @trials.push trial
 
-class root.Bin
-    constructor: ->
-        @facts = []
-    
-    push: (fact) ->
-        @facts.push(fact)
-
-    pop: ->
-        @facts.pop()
-
-    index: (i) ->
-        @facts[i]
-
-    length: ->
-        @facts.length
-

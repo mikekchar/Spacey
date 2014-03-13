@@ -1,4 +1,5 @@
-{Bin, Fact} = require('./spacey.coffee') if require? 
+{Bin} = require('./bin.coffee') if require? 
+{Fact} = require('./spacey.coffee') if require? 
 
 # If exports exist (i.e. nodeJS) use it, otherwise window (browser)
 root = exports ? this
