@@ -1,5 +1,5 @@
 {Bin} = require '../src/bin.coffee'
-{Fact} = require '../src/spacey.coffee'
+{Fact} = require '../src/fact.coffee'
 {Quiz} = require '../src/quiz.coffee'
 
 describe "Quiz", ->
