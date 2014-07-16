@@ -12,4 +12,3 @@ class exports.Quiz extends Quiz
     @added.push(f)
     @push(f)
     return this
-

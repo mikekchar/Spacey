@@ -2,9 +2,8 @@
 root = exports ? this
 
 class root.Fact
-    constructor: ->
-        @trials = []
+  constructor: ->
+    @trials = []
 
-    push: (trial) ->
-        @trials.push trial
-
+  push: (trial) ->
+    @trials.push trial

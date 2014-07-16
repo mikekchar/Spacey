@@ -2,18 +2,17 @@
 root = exports ? this
 
 class root.Bin
-    constructor: ->
-        @facts = []
+  constructor: ->
+    @facts = []
     
-    push: (fact) ->
-        @facts.push(fact)
+  push: (fact) ->
+    @facts.push(fact)
 
-    pop: ->
-        @facts.pop()
+  pop: ->
+    @facts.pop()
 
-    index: (i) ->
-        @facts[i]
+  index: (i) ->
+    @facts[i]
 
-    length: ->
-        @facts.length
-
+  length: ->
+    @facts.length
