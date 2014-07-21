@@ -7,6 +7,7 @@ class root.Bin
     
   push: (fact) ->
     @facts.push(fact)
+    fact
 
   pop: ->
     @facts.pop()

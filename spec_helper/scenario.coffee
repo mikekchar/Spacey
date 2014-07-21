@@ -2,7 +2,11 @@
 {Fact} = require '../src/fact.coffee'
 {Bin} = require '../src/bin.coffee'
  
-class exports.Quiz extends Quiz
+class exports.Scenario
+  has_quiz: ->
+    @quiz = new ScenarioQuiz
+
+class ScenarioQuiz extends Quiz
   constructor: ->
     super()
     @added = new Bin
@@ -11,4 +15,4 @@ class exports.Quiz extends Quiz
     f = new Fact
     @added.push(f)
     @push(f)
-    return this
+    return f

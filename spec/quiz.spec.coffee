@@ -13,12 +13,16 @@ describe "Quiz", ->
     expect(q.new_bin.length()).toEqual 1
 
 
-  it 'moves items to the working bin', ->
-    q = new Scenario.Quiz
-    q.with_fact()
-    expect(q.new_bin.length()).toEqual 1
-    expect(q.working_bin.length()).toEqual 0
-    q.next()
-    expect(q.new_bin.length()).toEqual 0
-    expect(q.working_bin.length()).toEqual 1
-    expect(q.working_bin.index(0)).toBe q.added.index(0)
+  describe "working bin", ->
+    beforeEach ->
+      s = new Scenario.Scenario
+      s.has_quiz().with_fact()
+      @q = s.quiz
+
+    it 'moves items to the working bin', ->
+      expect(@q.new_bin.length()).toEqual 1
+      expect(@q.working_bin.length()).toEqual 0
+      @q.next()
+      expect(@q.new_bin.length()).toEqual 0
+      expect(@q.working_bin.length()).toEqual 1
+      expect(@q.working_bin.index(0)).toBe @q.added.index(0)
