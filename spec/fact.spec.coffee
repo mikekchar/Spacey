@@ -2,10 +2,14 @@
 Fake = require '../spec_helper/fakes.coffee'
 
 describe "Fact", ->
-    
-  it 'can add trials', ->
-    f = new Fact
-    t = new Fake.Trial
-    expect(f.trials.length).toEqual 0
-    f.push(t)
-    expect(f.trials.length).toEqual 1
+  beforeEach ->
+    @f = new Fact
+    @t = new Fake.Trial
+   
+  it 'has no trials at the start', ->
+    expect(@f.length()).toEqual 0
+
+  describe 'push()', ->
+    it 'can add trials', ->
+      @f.push(@t)
+      expect(@f.length()).toEqual 1

@@ -5,16 +5,17 @@ Scenario = require '../spec_helper/scenario.coffee'
 
 describe "Quiz", ->
 
+  beforeEach ->
+    @q = new Quiz
+    @f = new Fact
+
   it 'starts with empty bins', ->
-    q = new Quiz
-    expect(q.new_size()).toEqual 0
-    expect(q.working_size()).toEqual 0
+    expect(@q.new_size()).toEqual 0
+    expect(@q.working_size()).toEqual 0
 
   it 'adds new facts to the new bin', ->
-    q = new Quiz
-    f = new Fact
-    q.push(f)
-    expect(q.new_size()).toEqual 1
+    @q.push(@f)
+    expect(@q.new_size()).toEqual 1
 
   describe "working bin", ->
     beforeEach ->

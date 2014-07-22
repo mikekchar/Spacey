@@ -7,3 +7,6 @@ class root.Fact
 
   push: (trial) ->
     @trials.push trial
+
+  length: ->
+    @trials.length

@@ -6,11 +6,13 @@ describe "Bin", ->
     @b = new Bin
     @f = new Fact
 
+  it 'is empty when it starts', ->
+    expect(@b.length()).toEqual 0
+
   describe "push()", ->
     it 'can add a fact to the facts', ->
-      expect(@b.facts.length).toEqual 0
       @b.push(@f)
-      expect(@b.facts.length).toEqual 1
+      expect(@b.length()).toEqual 1
 
     it 'returns the fact just pushed', ->
       expect(@b.push(@f)).toEqual @f
