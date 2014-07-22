@@ -5,13 +5,16 @@ Scenario = require '../spec_helper/scenario.coffee'
 
 describe "Quiz", ->
 
+  it 'starts with empty bins', ->
+    q = new Quiz
+    expect(q.new_size()).toEqual 0
+    expect(q.working_size()).toEqual 0
+
   it 'adds new facts to the new bin', ->
     q = new Quiz
-    expect(q.new_bin.length()).toEqual 0
     f = new Fact
     q.push(f)
-    expect(q.new_bin.length()).toEqual 1
-
+    expect(q.new_size()).toEqual 1
 
   describe "working bin", ->
     beforeEach ->
@@ -19,10 +22,8 @@ describe "Quiz", ->
       s.has_quiz().with_fact()
       @q = s.quiz
 
-    it 'moves items to the working bin', ->
-      expect(@q.new_bin.length()).toEqual 1
-      expect(@q.working_bin.length()).toEqual 0
+    it 'moves items to the working bin on next()', ->
       @q.next()
-      expect(@q.new_bin.length()).toEqual 0
-      expect(@q.working_bin.length()).toEqual 1
+      expect(@q.new_size()).toEqual 0
+      expect(@q.working_size()).toEqual 1
       expect(@q.working_bin.index(0)).toBe @q.added.index(0)

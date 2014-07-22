@@ -9,6 +9,12 @@ class root.Quiz
     @new_bin = new Bin
     @working_bin = new Bin
 
+  new_size: ->
+    @new_bin.length()
+
+  working_size: ->
+    @working_bin.length()
+
   push: (fact) ->
     @new_bin.push(fact)
 
