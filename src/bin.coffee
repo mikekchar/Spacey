@@ -9,9 +9,6 @@ class root.Bin
     @facts.push(fact)
     fact
 
-  pop: ->
-    @facts.pop()
-
   index: (i) ->
     @facts[i] || null
 

@@ -29,15 +29,3 @@ describe "Quiz", ->
 
       it "returns the first new item", ->
         expect(@q.select()).toEqual @q.new_bin.index(0)
-
-  describe "working bin", ->
-    beforeEach ->
-      s = new Scenario.Scenario
-      s.has_quiz().with_fact()
-      @q = s.quiz
-
-    it 'moves items to the working bin on next()', ->
-      @q.next()
-      expect(@q.new_size()).toEqual 0
-      expect(@q.working_size()).toEqual 1
-      expect(@q.working_bin.index(0)).toBe @q.added.index(0)
