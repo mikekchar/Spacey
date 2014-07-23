@@ -9,6 +9,11 @@ describe "Bin", ->
   it 'is empty when it starts', ->
     expect(@b.length()).toEqual 0
 
+  describe "when empty,", ->
+    describe "index()", ->
+      it 'returns null', ->
+        expect(@b.index(0)).toBeNull()
+
   describe "push()", ->
     it 'can add a fact to the facts', ->
       @b.push(@f)

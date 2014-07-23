@@ -18,6 +18,9 @@ class root.Quiz
   push: (fact) ->
     @new_bin.push(fact)
 
+  select: ->
+    @new_bin.index(0)
+
   next: ->
     a = @new_bin.pop()
     @working_bin.push(a)

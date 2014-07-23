@@ -16,6 +16,19 @@ describe "Quiz", ->
   it 'adds new facts to the new bin', ->
     @q.push(@f)
     expect(@q.new_size()).toEqual 1
+    expect(@q.new_bin.index(0)).toEqual @f
+
+  describe "select()", ->
+    describe "when quiz is empty", ->
+      it "returns null", ->
+        expect(@q.select()).toBeNull()
+
+    describe "when there are only facts in the new bin", ->
+      beforeEach ->
+        @q.push(@f)
+
+      it "returns the first new item", ->
+        expect(@q.select()).toEqual @q.new_bin.index(0)
 
   describe "working bin", ->
     beforeEach ->

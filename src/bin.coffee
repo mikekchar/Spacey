@@ -13,7 +13,7 @@ class root.Bin
     @facts.pop()
 
   index: (i) ->
-    @facts[i]
+    @facts[i] || null
 
   length: ->
     @facts.length
