@@ -1,8 +1,8 @@
+unless root? then root = exports ? this
+
 {Bin} = if require? then require('./bin.coffee') else this
 {Fact} = if require? then require ('./fact.coffee') else this
 
-# If exports exist (i.e. nodeJS) use it, otherwise window (browser)
-root = exports ? this
 
 class root.Quiz
   constructor: ->
