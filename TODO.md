@@ -1,1 +1,15 @@
-* Find out how to do require on non nodeJS systems
+## Metaphor
+
+Spacey is a priority queue.  Facts can be pushed onto the priority queue.
+The queue acts as an array of facts.  You can get a reference to the
+first fact and the last fact.  You can also get a reference to the nth
+fact by indexing the queue.  Finally, you can take an array of references
+to facts to get a subset of the facts.
+
+Facts in the priority queue are ordered by importance.  To understand the
+importance, you must understand that the queue holds the facts in 3 separate
+sets.  Items that have never been seen before are in the "new set".  Items
+that need short term review are in the "working set".  Items that are
+scheduled for long term review are in the "review set".
+
+
