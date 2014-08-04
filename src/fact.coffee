@@ -1,4 +1,4 @@
-unless root? then root = exports ? this
+unless root? then root = module.exports ? this
 
 class root.Fact
   constructor: ->

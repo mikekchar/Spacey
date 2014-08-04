@@ -1,8 +1,5 @@
-unless root? then root = exports ? this
-
-{Bin} = if require? then require('./bin.coffee') else this
-{Fact} = if require? then require ('./fact.coffee') else this
-
+unless root? then root = module.exports ? this
+Bin = if require? then require('./bin.coffee').Bin else this
 
 class root.Quiz
   constructor: ->
