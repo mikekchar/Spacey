@@ -1,5 +1,7 @@
 ** Metaphor
 
+Note: I think this metaphor is wrong, but I'll go with it for now.
+
 Spacey is a priority queue.  Facts can be pushed onto the priority queue.
 The queue acts as an array of facts.  You can get a reference to the
 first fact and the last fact.  You can also get a reference to the nth
