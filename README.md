@@ -1,15 +1,17 @@
-Spacey
-======
+# Spacey
 
-What is Spacey?
----------------
-Spacey is a Javascript compatible library implementing a 
+## What is Spacey?
+
+Spacey is a ES6 library implementing a
 review prioritisation system.  It is intended to allow developers to
-build systems that help users optimise the time they use to 
-memorise facts.
+build systems that help users optimise the time they use to
+memorise facts.  I originally started this project in Coffeescript,
+but lost interest pretty quickly after I finished ranting in this
+document.  I'm coming back to it mainly because I want to write some
+code and I don't care what.
 
-What is Spacey not?
--------------------
+## What is Spacey not?
+
 In some ways it is easier to describe Spacey by contrasting it to
 what it is not.
 
@@ -23,90 +25,38 @@ what it is not.
   with other techniques such as spacing (different than spaced
   repetition) and interleaving.
 
-Using Spacey
-------------
+## Using Spacey
+
 Spacey is currently in development and doesn't do anything yet.
 Note that Spacey is a development library.  It is only useful for
 developers writing applications.
 
-Helping with Development
-------------------------
+## Helping with Development
+
 If you wish help with development, you will need the following:
 
-- node.js: latest version (0.10.3) as of this this writing
-- coffee-script: Install using `npm install -g coffee-script`
-- jasmine-node: Install using `npm install -g jasmine-node`
+- node.js: latest version (11.6) as of this this writing
 
-Warning: The version of node.js on Ubuntu (and presumably other
-Debian based systems) is not supported by the version of coffee-script
-in npm.  Thus you must compile node.js yourself.  You can get it
-[here](http://nodejs.org/).
+To run the tests type: `npm run test` from the main directory.
 
-To run the tests type: `jasmine-node --autotest --coffee spec` from the 
-main directory.  This will run the tests and watch for changes on the
-source code in order to rerun appropriate tests.
+### Features/Anti-Features (Depending on your point of view)
+#### ES6 code base
 
-Note: the script test.sh will set up the path and run the
-tests assuming that you put the node modules directory in
-the current directory.
-
-Frequently Unanswered Questions
--------------------------------
-Don't ask me to make an acronym for the above heading... These
-questions have not been asked yet, but I suspect they will be.
-So here are my answers in advance, so that you don't have to ask me...
-and I don't have to answer again.
-
-### Why Coffeescript?
-
-1. Why is this in Coffeescript????  Because I wanted to play
-   with Coffeescript.
-2. No, I mean, why do this with a Javascript derivative???  Short
-   answer: Because I wanted to.  Long answer:  I have an idea
-   that it might be useful for me in the future, but in the meantime,
-   I just wanted to play with Coffeescript.
-3. No, I mean, I can't do anything with this except write
-   browser plugins or websites.  Isn't that completely useless?
-   No, I don't think so.
-4. OK, how about implementing this in a useful language?
-   Maybe, if I feel like it.  However, Spacey should not be
-   complicated.  Feel free to look at the implementation and
-   reimplement in your definition of a useful language.  I
-   will probably even help you if you do the lion's share of
-   the work.
+Mainly I wanted something that would make it easy to write
+quiz systems that would be easy to port and deploy on
+different systems.  The precursor, JLDrill was impossible
+from that perspective.  I also just enjoy writing ES6 code.
+Whether it is actually useful or not, for me that's the
+biggest issue.
 
 #### Unique SRS algorithm
 
-1. Why did you reinvent the wheel with your SRS algorithm?  Because
-   it was fun.
-2. No, I mean, why not use something proven like Supermemo's?  It
-   is true that Supermemo's algorithm is used ubiquitously.  That is
-   in fact part of the reason I chose not to use it.  Everybody using
-   the same technique means that we will never improve the state of
-   the art.
-3. No, I mean, Supermemo dude got a PhD for his work on that algorithm.
-   What makes you think you can do something better?  I don't know
-   if mine is better or not.  However, if you look at the Supermemo
-   algorithms, you will see many decisions being made with no
-   reference to data backing it up.  For example, the backoff timing
-   appears to be completely arbitrary based on his gut feeling
-   of how it should work.  He claims that he has data to back up his
-   decisions, but doesn't document those claims.
-4. But with the Supermemo algorithms, the user chooses how well they
-   know the item, while with Spacey's algorithm, you only specify
-   if they remembered or not.  Isn't Supermemo's algorithm better?
-   There is no evidence to support that a person's impression of
-   how well they know something is correlated to how well they
-   actually know something.  In fact, there is considerable evidence
-   to support the opposite hypothesis.  See: Dunning-Kruger effect.
-5. But with Supermemo, the algorithm knows when I need to review
-   something.  Spacey's algorithm doesn't calculate that.  Isn't
-   that worse?  See: What Spacey is not.  Spacey is not a Spaced
-   Repetition System.  It merely prioritises reviews.  It tells you
-   which item is the most important to review now.  You choose
-   when to review.  I feel this is a feature, not a bug since I
-   don't want a computer program telling me that it's time to study.
-   YMMV.
+Spacey uses a unique SRS algorithm.  I could have used something
+proven like Supermemo's algorithm (that's in use in systems like
+Anki) but I don't like the fact that it is ubiquitous.  Also,
+quite a lot of the rationale behind Supermemo's algorithm seemed
+completely arbitrary to me.  There are also a few advantages to
+my algorithm (which I will describe at another time).
 
 ### What are the differences between Spaced Repetition, Spacing and Interleaving
 
@@ -163,8 +113,8 @@ simply an easy technique for causing spacing to happen.  There is some
 speculation that changing topics makes it easier to forget what you
 have learned, which triggers the spacing effect faster.  In other words,
 because you switched topics rather than just having a rest, you
-forgot the first part faster than you normally would.  This allows the 
-spacing effect to be used the second time around.  I you had just rested, 
+forgot the first part faster than you normally would.  This allows the
+spacing effect to be used the second time around.  I you had just rested,
 you might still remember the material, meaning that you can't use the
 spacing effect.
 
@@ -192,13 +142,10 @@ Quite some time ago, someone suggested that I switch to making a web
 application.  I initially threw out the idea as I did not want to
 maintain a website for others to use.  However, the idea lodged itself in
 my brain and because deployment of JLDrill is so difficult, I may yet
-do it. 
+do it.
 
-The choice of Javascript/Coffeescript as a development language is strange.
-On the one side, after learning Javascript I became enamoured with its
-minimilistic approach.  Looking at Coffeescript, it looked even more
-entertaining and I knew that I wanted an excuse to use it.  Spacey is
-that excuse.
+The choice of ES6 as a development language is strange.  I admit this,
+but I enjoy writing code in this environment, so why not?
 
 Some ideas I have for Spacey are more practical, though.  First, I can
 see potential in utilising it together with browser plugins like

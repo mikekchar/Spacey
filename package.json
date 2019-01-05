@@ -1,0 +1,32 @@
+{
+  "name": "spacey",
+  "version": "0.0.1",
+  "description": "A library for prioritised flash card-like reviews",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikekchar/Spacey.git"
+  },
+  "keywords": [
+    "SRS",
+    "flash",
+    "card",
+    "library",
+    "spaced",
+    "spacing"
+  ],
+  "author": "Mike Charlton",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/mikekchar/Spacey/issues"
+  },
+  "homepage": "https://github.com/mikekchar/Spacey#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.11.1",
+    "mocha": "^5.2.0"
+  }
+}
